@@ -1,25 +1,18 @@
-.btn-primary {
-  background: rgb(217, 124, 11);
-  background: linear-gradient(
-    20deg,
-    rgba(217, 124, 11, 1) 0%,
-    rgba(242, 188, 27, 1) 98%
-  );
+/* .btn-primary {
+  background: #fbb034;
+  background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
   border: none;
   color: #000;
 }
 
 .btn-primary:hover {
-  background: rgb(217, 124, 11);
-  background: linear-gradient(
-    20deg,
-    rgba(242, 188, 27, 1) 0%,
-    rgba(217, 124, 11, 1) 98%
-  );
+  background: #fbb034;
+  background: linear-gradient(315deg, #ffdd00 0%, #fbb034 74%);
   border: none;
   color: #000;
-}
+} */
 
 a {
   text-decoration: none;
+  color: #fbb034 ;
 }

@@ -10,59 +10,64 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="" />
   </head>
   <body>
     <h1>🚗 AutoRevise</h1>
 
-    <div *ngIf="!auth.user" class="m-3">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            [(ngModel)]="email"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            Nunca compartilharemos seu e-mail com mais ninguém.
+    <div class="card m-3 text-bg-dark" style="width: 30rem;">
+      <div *ngIf="!auth.user" class="card-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              [(ngModel)]="email"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text" style="color:#808080">
+              Nunca compartilharemos seu e-mail com mais ninguém.
+            </div>
           </div>
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            name="password"
-            [(ngModel)]="password"
-          />
-        </div>
-        <div class="btn-group" role="group" aria-label="Basic example">
-        <button
-          type="submit"
-          class="btn btn-primary m-1"
-          (click)="auth.emailSignin(this.email, this.password)"
-        >
-          Login com Email
-        </button>
-        <button
-          type="submit"
-          class="btn btn-primary m-1"
-          (click)="auth.googleSignin()"
-        >
-          Login com Google
-        </button>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              [(ngModel)]="password"
+            />
+          </div>
+          <div class="card-group text-center" role="group" aria-label="Login">
+            <button
+              type="submit"
+              class="btn btn-primary m-1"
+              (click)="auth.emailSignin(this.email, this.password)"
+            >
+              Login com Email
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary m-1"
+              (click)="auth.googleSignin()"
+            >
+              Login com Google
+            </button>
+          </div>
+          <p class="card-footer text-center">
+            Ainda não é cadastrado? <a href="#">Crie uma conta</a>
+          </p>
+        </form>
       </div>
-      </form>
     </div>
 
     <div *ngIf="auth.error" style="color: red">
       {{ auth.error }}
     </div>
-
 
     <div *ngIf="auth.user">
       Logado como <b>{{ auth.user.email }}</b>

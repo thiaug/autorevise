@@ -1,0 +1,25 @@
+.btn-primary {
+  background: rgb(217, 124, 11);
+  background: linear-gradient(
+    20deg,
+    rgba(217, 124, 11, 1) 0%,
+    rgba(242, 188, 27, 1) 98%
+  );
+  border: none;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: rgb(217, 124, 11);
+  background: linear-gradient(
+    20deg,
+    rgba(242, 188, 27, 1) 0%,
+    rgba(217, 124, 11, 1) 98%
+  );
+  border: none;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}

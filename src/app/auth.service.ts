@@ -16,6 +16,7 @@ export class AuthService {
         password
       );
       this.user = credential.user;
+      this.error = null;
     } catch (error) {
       this.error = error;
     }
@@ -26,6 +27,7 @@ export class AuthService {
       const provider = new firebase.auth.GoogleAuthProvider();
       const credential = await this.auth.signInWithPopup(provider);
       this.user = credential.user;
+      this.error = null;
     } catch (error) {
       this.error = error;
     }

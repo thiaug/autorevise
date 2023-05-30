@@ -1,54 +1,85 @@
-<h1>🚗 AutoRevise</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoRevise - Manutenção em dia, segurança em todo trajeto</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>🚗 AutoRevise</h1>
 
-<div *ngIf="!auth.user">
-  <form>
-    <fieldset>
-      <legend>Login</legend>
-      <div>Email</div>
-      <input type="text" name="email" [(ngModel)]="email" />
-      <div>Senha</div>
-      <input type="password" name="password" [(ngModel)]="password" />
-      <hr />
-      <button (click)="auth.emailSignin(this.email, this.password)">
-        Login with e-mail
+    <div *ngIf="!auth.user" class="m-3">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            [(ngModel)]="email"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            Nunca compartilharemos seu e-mail com mais ninguém.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            [(ngModel)]="password"
+          />
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+        <button
+          type="submit"
+          class="btn btn-primary m-1"
+          (click)="auth.emailSignin(this.email, this.password)"
+        >
+          Login com Email
+        </button>
+        <button
+          type="submit"
+          class="btn btn-primary m-1"
+          (click)="auth.googleSignin()"
+        >
+          Login com Google
+        </button>
+      </div>
+      </form>
+    </div>
+
+    <div *ngIf="auth.error" style="color: red">
+      {{ auth.error }}
+    </div>
+
+
+    <div *ngIf="auth.user">
+      Logado como <b>{{ auth.user.email }}</b> |
+      <button type="button" class="btn btn-secondary" (click)="auth.signOut()">
+        Sair
       </button>
-      |
-      <button (click)="auth.googleSignin()">Login with Google</button>
-    </fieldset>
-  </form>
-</div>
+      <hr />
 
-<div *ngIf="auth.error" style="color: red">
-  {{ auth.error }}
-</div>
-<div *ngIf="auth.user">
-  Logado como <b>{{ auth.user.email }}</b> |
-  <button (click)="auth.signOut()">Exit</button>
-  <hr />
+      <h2>AutoRevise</h2>
+      <hr />
+      <p>ENTROU</p>
+    </div>
 
-  <h2>Firebase list</h2>
-  <hr />
-  <div>Name:</div>
-  <div><input [(ngModel)]="formNewName" /></div>
-  <div>Age:</div>
-  <div><input type="number" [(ngModel)]="formNewAge" /></div>
-  <br />
-  <button (click)="addItem()">Adicionar</button>
-  <hr />
-  <table border="1">
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Email</th>
-      <th>Commmand</th>
-    </tr>
-    <tr *ngFor="let item of list | async">
-      <td [title]="['chave: ' + item.key]">{{ item.name }}</td>
-      <td>{{ item.age }}</td>
-      <td>{{ item.email }}</td>
-      <td>
-        <button (click)="deleteItem(item.key)">Remove</button>
-      </td>
-    </tr>
-  </table>
-</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

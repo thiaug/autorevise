@@ -12,6 +12,9 @@
   color: #000;
 } */
 
+body{
+  background-color:  	#1e1e1e;
+}
 a {
   text-decoration: none;
   color: #fbb034 ;

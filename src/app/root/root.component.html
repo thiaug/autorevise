@@ -1,8 +1,8 @@
 <div class="container">
   <h1 class="text-center" style="color:#fbb034">AutoRevise</h1>
 
+  <div *ngIf="!auth.user" class="card-body">
   <div class="card text-bg-dark mx-auto p-2" style="width: 30rem;">
-    <div *ngIf="!auth.user" class="card-body">
       <form>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -80,48 +80,47 @@
         </div>
       </form>
     </div>
-
     <div *ngIf="auth.error" style="color: red">
       {{ auth.error }}
     </div>
-
-    <div *ngIf="auth.user">
-      Logado como <b>{{ auth.user.email }}</b>
-      <button type="button" class="btn btn-secondary" (click)="auth.signOut()">
-        Sair
-      </button>
-      <hr />
-      <app-home></app-home>
-    </div>
   </div>
 
-  <!-- Modal -->
-  <div
-    class="modal fade"
-    id="modalCadastro"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="modalCadastroLabel"
-    aria-hidden="true"
-    data-bs-theme="dark"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5">Cadastro de Usuario</h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <app-cadastro></app-cadastro>
-        </div>
+  <div *ngIf="auth.user">
+    Logado como <b>{{ auth.user.email }}</b>
+    <button type="button" class="btn btn-secondary" (click)="auth.signOut()">
+      Sair
+    </button>
+    <hr />
+    <app-home></app-home>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modalCadastro"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="modalCadastroLabel"
+  aria-hidden="true"
+  data-bs-theme="dark"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">Cadastro de Usuario</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <app-cadastro></app-cadastro>
       </div>
     </div>
   </div>
-  <app-footer></app-footer>
 </div>

@@ -14,11 +14,16 @@ a {
 }
 .btn-primary:hover {
   color: #000;
-  background-color: #F2CB05;
+  background-color: #f2cb05;
   border: none;
 }
 
+.modal {
+  background-color: #000;
+}
+
 .footer {
+  background-color: #111111;
   position: fixed;
   bottom: 0;
   padding: 20px;

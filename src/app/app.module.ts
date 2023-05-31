@@ -10,6 +10,7 @@ import { AuthService } from './auth.service';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -28,6 +29,10 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     }),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    RouterModule.forRoot([
+      {path:'', component: HomeComponent},
+      {path:'cadastro', component: CadastroComponent},
+    ])
   ],
   declarations: [RootComponent, HomeComponent, FooterComponent, CadastroComponent],
   bootstrap: [RootComponent],

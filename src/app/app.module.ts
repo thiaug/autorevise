@@ -9,6 +9,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AuthService } from './auth.service';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
   ],
-  declarations: [RootComponent, HomeComponent, FooterComponent],
+  declarations: [RootComponent, HomeComponent, FooterComponent, CadastroComponent],
   bootstrap: [RootComponent],
   providers: [AuthService],
 })

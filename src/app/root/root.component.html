@@ -1,110 +1,102 @@
-    <div class="container">
-      <div class="row">
-        <h1 class="text-center" style="color:#fbb034">AutoRevise</h1>
-        <div class="col"></div>
-        <div class="col">
-          <div class="card m-3 text-bg-dark" style="width: 30rem;">
-            <div *ngIf="!auth.user" class="card-body">
-              <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    [(ngModel)]="email"
-                    aria-describedby="emailHelp"
-                  />
-                  <div id="emailHelp" class="form-text" style="color:#808080">
-                    Nunca compartilharemos seu e-mail com mais ninguém.
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Senha</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    name="password"
-                    [(ngModel)]="password"
-                  />
-                </div>
-                <div
-                  class="card-group text-center d-grid gap-2 mt-4"
-                  role="group"
-                  aria-label="Login"
-                >
-                  <button
-                    type="submit"
-                    class="btn btn-primary m-1"
-                    (click)="auth.emailSignin(this.email, this.password)"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-envelope-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
-                      />
-                    </svg>
-                    Login com Email
-                  </button>
-                  <button
-                    type="submit"
-                    class="btn btn-primary m-1"
-                    (click)="auth.googleSignin()"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-google"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
-                      />
-                    </svg>
-                    Login com Google
-                  </button>
-                </div>
-                <p class="card-footer" style="backgroung-color:#fafafa;">
-                  Ainda não é cadastrado? <a href="#">Crie uma conta</a>
-                </p>
-              </form>
+<div class="container">
+  
+    <h1 class="text-center" style="color:#fbb034">AutoRevise</h1>
+   
+      <div class="card text-bg-dark mx-auto p-2" style="width: 30rem;">
+        <div *ngIf="!auth.user" class="card-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                [(ngModel)]="email"
+                aria-describedby="emailHelp"
+              />
+              <div id="emailHelp" class="form-text" style="color:#808080">
+                Nunca compartilharemos seu e-mail com mais ninguém.
+              </div>
             </div>
-          </div>
-
-          <div *ngIf="auth.error" style="color: red">
-            {{ auth.error }}
-          </div>
-
-          <div *ngIf="auth.user">
-            Logado como <b>{{ auth.user.email }}</b>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              (click)="auth.signOut()"
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                [(ngModel)]="password"
+              />
+            </div>
+            <div
+              class="card-group text-center d-grid gap-2 mt-4"
+              role="group"
+              aria-label="Login"
             >
-              Sair
-            </button>
-            <hr />
-
-            <h2>AutoRevise</h2>
-            <hr />
-            <app-home></app-home>
-          </div>
+              <button
+                type="submit"
+                class="btn btn-primary m-1"
+                (click)="auth.emailSignin(this.email, this.password)"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+                  />
+                </svg>
+                Login com Email
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary m-1"
+                (click)="auth.googleSignin()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-google"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
+                  />
+                </svg>
+                Login com Google
+              </button>
+            </div>
+            <div class="card-footer mt-3">
+              Ainda não é cadastrado? <a href="#">Crie uma conta</a>
+            </div>
+          </form>
         </div>
-        <div class="col"></div>
-      </div>
-      <app-footer></app-footer>
-    </div>
+     
 
+      <div *ngIf="auth.error" style="color: red">
+        {{ auth.error }}
+      </div>
+
+      <div *ngIf="auth.user">
+        Logado como <b>{{ auth.user.email }}</b>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="auth.signOut()"
+        >
+          Sair
+        </button>
+        <hr />
+        <app-home></app-home>
+      </div>
+    </div>
+  
+    <app-footer></app-footer>
+  </div>

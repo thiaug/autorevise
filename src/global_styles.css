@@ -1,8 +1,24 @@
 /* Add application styles & imports to this file! */
 body {
-  background-color: #111;
+  background-color: #111111;
 }
-.footer{
+a {
+  text-decoration: none;
+  color: #fbb034;
+}
+
+.btn-primary {
+  color: #000;
+  background-color: #fbb034;
+  border: none;
+}
+.btn-primary:hover {
+  color: #000;
+  background-color: #F2CB05;
+  border: none;
+}
+
+.footer {
   position: fixed;
   bottom: 0;
   padding: 20px;

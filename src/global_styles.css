@@ -18,8 +18,18 @@ a {
   border: none;
 }
 
+.btn-primary:active {
+  color: #000;
+  background-color: #8c7b26;
+  border: none;
+}
+
 .modal {
   background-color: #000;
+}
+
+.modal h1 {
+  color: #fff;
 }
 
 .footer {

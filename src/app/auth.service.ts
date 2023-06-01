@@ -16,6 +16,7 @@ export class AuthService {
         email,
         password
       );
+
       this.user = credential.user;
       this.error = null;
     } catch (error) {

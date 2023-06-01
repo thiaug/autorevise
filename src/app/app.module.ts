@@ -15,6 +15,7 @@ import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.co
 import { VerificarPecasComponent } from './verificar-pecas/verificar-pecas.component';
 import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.component';
 
+
 @NgModule({
   imports: [
     CommonModule,

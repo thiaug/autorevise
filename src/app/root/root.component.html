@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="text-center" style="color:#fbb034">AutoRevise</h1>
 
-  <div *ngIf="!auth.user" class="card-body">
+  <div *ngIf="auth.user" class="card-body">
   <div class="card text-bg-dark mx-auto p-2" style="width: 30rem;">
       <form>
         <div class="mb-3">
@@ -85,7 +85,7 @@
     </div>
   </div>
 
-  <div *ngIf="auth.user">
+  <div *ngIf="!auth.user">
     Logado como <b>{{ auth.user.email }}</b>
     <button type="button" class="btn btn-secondary" (click)="auth.signOut()">
       Sair

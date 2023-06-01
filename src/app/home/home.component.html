@@ -1,4 +1,16 @@
 <div class="container-fluid">
   <h1>BEM VINDO</h1>
   <p></p>
+  <div class="row">
+    <div class="col">
+    <a class="btn btn-primary mb-4" role="button" [routerLink]="['/cadastro-veiculo']" >Cadastrar</a>
+    </div>
+    <div class="col">
+    <a class="btn btn-primary mb-4" role="button" [routerLink]="['/cadastro-veiculo']" >Editar Veiculo</a>
+    </div>
+    <div class="col">
+    <a class="btn btn-primary mb-4" role="button" [routerLink]="['/verificar-pecas']" >Verificar Peças</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
 </div>

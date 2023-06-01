@@ -40,7 +40,7 @@ import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.componen
       {path:'verificar-pecas', component: VerificarPecasComponent},
     ])
   ],
-  declarations: [RootComponent, HomeComponent, FooterComponent, CadastroComponent],
+  declarations: [RootComponent, HomeComponent, FooterComponent, CadastroComponent,CadastroVeiculoComponent, EditarVeiculoComponent,VerificarPecasComponent],
   bootstrap: [RootComponent],
   providers: [AuthService],
 })

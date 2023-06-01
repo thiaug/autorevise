@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { RouterModule } from '@angular/router';
+import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
+import { VerificarPecasComponent } from './verificar-pecas/verificar-pecas.component';
+import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.component';
 
 @NgModule({
   imports: [
@@ -32,6 +35,9 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {path:'', component: HomeComponent},
       {path:'cadastro', component: CadastroComponent},
+      {path:'cadastro-veiculo', component: CadastroVeiculoComponent},
+      {path:'editar-veiculo', component: EditarVeiculoComponent},
+      {path:'verificar-pecas', component: VerificarPecasComponent},
     ])
   ],
   declarations: [RootComponent, HomeComponent, FooterComponent, CadastroComponent],

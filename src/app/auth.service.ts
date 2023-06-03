@@ -30,6 +30,20 @@ export class AuthService {
     }
   }
 
+  async emailSignup(username: string, email: string, password: string) {
+    try {
+      const credential = await this.auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      this.user = credential.user;
+      this.error = null;
+      sessionStorage.setItem('user', JSON.stringify(this.user));
+    } catch (error) {
+      this.error = error;
+    }
+  }
+
   async googleSignin() {
     try {
       const provider = new firebase.auth.GoogleAuthProvider();

@@ -1,29 +1,26 @@
-<div class="container-fluid">
+<div class="container">
   <h1>CADASTRO VEÍCULO</h1>
-  <form class="text-bg-dark d-grid gap-2 mt-4">
+  <form class="text-bg-dark d-grid gap-2 mt-4 formulario">
     <div class="mb-3">
       <label for="marcaVeiculo" class="form-label">Marca</label>
-      <select class="form-select" aria-label="Escolha a marca do carro">
-        <option selected>Escolha a Marca</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
+      <input type="text" id="marcaVeiculo" class="form-control" />
     </div>
-    <div>
+    <div class="mb-3">
       <label for="modeloVeiculo" class="form-label">Modelo Veículo</label>
-      <select class="form-select" aria-label="Escolha a modelo do carro">
-        <option selected>Escolha o Modeloo</option>
+      <input type="text" id="modeloVeiculo" class="form-control">
+      <!-- <select class="form-select" aria-label="Escolha a modelo do carro">
+        <option selected>Escolha o Modelo</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
-      </select>
+      </select> -->
     </div>
     <div class="mb-4">
       <label for="anoVeiculo" class="form-label">Digite o Ano do Veículo</label>
       <input type="number" class="form-control" id="anoVeiculo" />
     </div>
-    <div class="d-grid gap-2"></div>
-    <button type="submit" class="btn btn-primary mb-4">Cadastrar</button>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-primary mb-4">Cadastrar</button>
+    </div>
   </form>
 </div>

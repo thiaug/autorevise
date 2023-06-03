@@ -7,6 +7,7 @@
         class="form-control"
         id="cadastroUsername"
         [(ngModel)]="username"
+        [ngModelOptions]="{standalone: true}"
       />
     </div>
     <div>
@@ -17,6 +18,7 @@
         id="cadastroEmail"
         aria-describedby="emailHelp"
         [(ngModel)]="email"
+        [ngModelOptions]="{standalone: true}"
       />
       <div id="emailHelp" class="form-text" style="color:#808080">
         Nunca compartilharemos seu e-mail com mais ninguém.
@@ -29,6 +31,7 @@
         class="form-control"
         id="cadastroPassword"
         [(ngModel)]="password"
+        [ngModelOptions]="{standalone: true}"
       />
     </div>
     <div class="d-grid gap-2"></div>

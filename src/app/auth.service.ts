@@ -9,6 +9,7 @@ import firebase from 'firebase/compat/app';
 export class AuthService {
   user: any;
   error: any;
+  username: any;
 
   constructor(public auth: AngularFireAuth) {
     const user = sessionStorage.getItem('user');

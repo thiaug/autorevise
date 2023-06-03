@@ -2,7 +2,12 @@
   <form class="text-bg-dark d-grid gap-2 mt-4">
     <div class="mb-3">
       <label for="cadastroUsername" class="form-label">Nome de Usuário</label>
-      <input type="text" class="form-control" id="cadastroUsername" />
+      <input
+        type="text"
+        class="form-control"
+        id="cadastroUsername"
+        [(ngModel)]="username"
+      />
     </div>
     <div>
       <label for="cadastroEmail" class="form-label">Endereço de Email</label>
@@ -11,6 +16,7 @@
         class="form-control"
         id="cadastroEmail"
         aria-describedby="emailHelp"
+        [(ngModel)]="email"
       />
       <div id="emailHelp" class="form-text" style="color:#808080">
         Nunca compartilharemos seu e-mail com mais ninguém.
@@ -18,9 +24,16 @@
     </div>
     <div class="mb-4">
       <label for="cadastroPassword" class="form-label">Senha</label>
-      <input type="password" class="form-control" id="cadastroPassword" />
+      <input
+        type="password"
+        class="form-control"
+        id="cadastroPassword"
+        [(ngModel)]="password"
+      />
     </div>
     <div class="d-grid gap-2"></div>
-    <button type="submit" class="btn btn-primary mb-4">Cadastrar</button>
+    <button type="submit" class="btn btn-primary mb-4" (click)="signup()">
+      Cadastrar
+    </button>
   </form>
 </div>

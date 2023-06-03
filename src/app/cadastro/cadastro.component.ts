@@ -7,7 +7,14 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent implements OnInit {
-  constructor(private authService: AuthService) {}
+
+  constructor(private authService: AuthService) {
+    
+  }
+
+  signup() {
+    this.authService.emailSignup(this.username, this.email, this.password);
+  }
 
   ngOnInit() {}
 }

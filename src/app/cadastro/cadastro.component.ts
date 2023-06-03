@@ -13,7 +13,7 @@ export class CadastroComponent implements OnInit {
 
   constructor(private authService: AuthService) {
     this.username = '';
-    this.email = this.email.getText().toString().trim();
+    this.email = '';
     this.password = '';
   }
 

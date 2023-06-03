@@ -41,16 +41,23 @@
               >
             </li>
           </ul>
-
           <form class="d-flex">
-            Logado como: <b>{{ auth.user.email }}</b>
+            <div class="col-sm-9">
+              <p class="lh-1" style="color:#fff">
+                <small
+                  >Logado como: <b>{{ auth.user.email }}</b></small
+                >
+              </p>
+            </div>
+            <div class="col-sm-9">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-outline-primary"
               (click)="auth.signOut()"
             >
               Sair
             </button>
+            </div>
           </form>
         </div>
       </div>

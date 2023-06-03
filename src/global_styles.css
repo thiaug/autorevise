@@ -26,6 +26,16 @@ h1{
   background-color: #8c7b26;
   border: none;
 }
+.btn-outline-primary{
+  color:#fbb034;
+  border-color:#fbb034;
+}
+
+.btn-outline-primary:hover{
+  color: #000;
+  background-color:#fbb034;
+  border-color:#fbb034;
+}
 
 .modal {
   background-color: #000;

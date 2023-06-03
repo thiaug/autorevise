@@ -7,9 +7,14 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent implements OnInit {
+  username: string;
+  email: string;
+  password: string;
 
   constructor(private authService: AuthService) {
-    
+    this.username = '';
+    this.email = '';
+    this.password = '';
   }
 
   signup() {

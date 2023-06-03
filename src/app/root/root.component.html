@@ -2,6 +2,7 @@
   <h1 class="text-center" style="color:#fbb034"></h1>
 
   <div *ngIf="!auth.user" class="card-body">
+    <h1 class="text-center mb-5">AutoRevise</h1>
     <div class="card text-bg-dark mx-auto p-2" style="width: 30rem;">
       <form>
         <div class="mb-3">
@@ -87,8 +88,8 @@
 
   <div *ngIf="auth.user">
     <div class="container-fluid">
-    <app-home></app-home>
-  </div>
+      <app-home></app-home>
+    </div>
   </div>
   <app-footer></app-footer>
 </div>

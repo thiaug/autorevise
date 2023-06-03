@@ -2,7 +2,6 @@
   <div class="row">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-
         <a class="navbar-brand" style="color:#fff">AutoRevise</a>
         <button
           class="navbar-toggler"
@@ -44,10 +43,15 @@
           </ul>
 
           <form class="d-flex">
-          Logado como <b>{{ auth.user.email }}</b>
-          <button type="button" class="btn btn-secondary" (click)="auth.signOut()">Sair</button>
-        </form>
-  
+            Logado como: <b>{{ auth.user.email }}</b>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              (click)="auth.signOut()"
+            >
+              Sair
+            </button>
+          </form>
         </div>
       </div>
     </nav>

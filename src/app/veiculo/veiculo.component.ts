@@ -8,6 +8,7 @@ import { Veiculo } from '.././veiculo';
   templateUrl: './veiculo.component.html',
   styleUrls: ['./veiculo.component.css'],
 })
+
 export class VeiculoComponent implements OnInit {
   veiculos: Veiculo[] = [];
 
@@ -26,4 +27,38 @@ export class VeiculoComponent implements OnInit {
       });
     });
   }
+
+  addVeiculo(veiculo: Veiculo) {
+    this.veiculoService
+      .addVeiculo(veiculo)
+      .then(() => {
+        console.log('TESTE: Veiculo add');
+      })
+      .catch((error) => {
+        console.error('Erro ao adicionar veículo', error);
+      });
+  }
+
+  updateVeiculo(veiculo: Veiculo) {
+    this.veiculoService
+      .updateVeiculo(veiculo)
+      .then(() => {
+        console.log('TESTE: Veiculo Atualizado!');
+      })
+      .catch((error) => {
+        console.error('Erro ao atualizar veículo', error);
+      });
+  }
+
+  deleteVeiculo(id: string) {
+    this.veiculoService
+      .deleteVeiculo(id)
+      .then(() => {
+        console.log('TESTE: Veiculo Deletado');
+      })
+      .catch((error) => {
+        console.error('Erro ao deletar veiculo');
+      });     
+  }
+
 }

@@ -14,6 +14,8 @@ import { RouterModule } from '@angular/router';
 import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
 import { VerificarPecasComponent } from './verificar-pecas/verificar-pecas.component';
 import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.component';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestoreCollection } from '@angular/fire/compat/firestore/public_api';
 
 
 @NgModule({

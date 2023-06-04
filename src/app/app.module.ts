@@ -17,6 +17,7 @@ import { EditarVeiculoComponent } from './editar-veiculo/editar-veiculo.componen
 import { Firestore } from '@angular/fire/firestore';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFirestoreCollection } from '@angular/fire/compat/firestore/public_api';
+import { VeiculoComponent } from './veiculo/veiculo.component';
 
 @NgModule({
   imports: [
@@ -51,6 +52,7 @@ import { AngularFirestoreCollection } from '@angular/fire/compat/firestore/publi
     CadastroVeiculoComponent,
     EditarVeiculoComponent,
     VerificarPecasComponent,
+    VeiculoComponent,
   ],
   bootstrap: [RootComponent],
   providers: [AuthService],

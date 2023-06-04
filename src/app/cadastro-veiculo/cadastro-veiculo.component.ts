@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { VeiculoService } from '.././veiculo.service';
-// import { Veiculo } from '.././veiculo';
+import { VeiculoService } from '.././veiculo.service';
+import { Veiculo } from '.././veiculo';
 
 @Component({
   selector: 'app-cadastro-veiculo',

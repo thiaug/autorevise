@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
+// import { AngularFirestore } from '@angular/fire/compat/firestore';
+// import { AngularFirestoreCollection } from '@angular/fire/compat/firestore/public_api';
+// import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+
 
 import {
   AngularFirestore,
   AngularFirestoreCollection,
   DocumentChangeAction,
 } from '@angular/fire/firestore';
+
 import { Observable } from 'rxjs';
 import { Veiculo } from './veiculo';
 

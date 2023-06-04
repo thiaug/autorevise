@@ -6,8 +6,8 @@ a {
   text-decoration: none;
   color: #fbb034;
 }
-h1{
-  color:#fff ;
+h1 {
+  color: #fff;
 }
 
 .btn-primary {
@@ -26,15 +26,15 @@ h1{
   background-color: #8c7b26;
   border: none;
 }
-.btn-outline-primary{
-  color:#fbb034;
-  border-color:#fbb034;
+.btn-outline-primary {
+  color: #fbb034;
+  border-color: #fbb034;
 }
 
-.btn-outline-primary:hover{
+.btn-outline-primary:hover {
   color: #000;
-  background-color:#fbb034;
-  border-color:#fbb034;
+  background-color: #fbb034;
+  border-color: #fbb034;
 }
 
 .modal {

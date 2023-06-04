@@ -11,7 +11,6 @@ import { Veiculo } from './veiculo';
 @Injectable({
   providedIn: 'root',
 })
-
 export class VeiculoService {
   private veiculosCollection: AngularFirestoreCollection<Veiculo>;
 

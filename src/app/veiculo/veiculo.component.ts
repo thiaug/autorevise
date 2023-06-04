@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import firebase from 'firebase/compat/app';
+import firebase from 'firebase/compat/app';
 import { VeiculoService } from '.././veiculo.service';
 import { Veiculo } from '.././veiculo';
 
@@ -8,11 +8,11 @@ import { Veiculo } from '.././veiculo';
   templateUrl: './veiculo.component.html',
   styleUrls: ['./veiculo.component.css'],
 })
-
 export class VeiculoComponent implements OnInit {
   veiculos: Veiculo[] = [];
 
-  constructor(private veiculoService: VeiculoService) {}
+  constructor(public veiculoService: VeiculoService) {}
+  // ERRO AO CHAMAR O CONSTRUTOR !!!!
 
   ngOnInit() {
     this.loadVeiculos();
@@ -58,7 +58,6 @@ export class VeiculoComponent implements OnInit {
       })
       .catch((error) => {
         console.error('Erro ao deletar veiculo');
-      });     
+      });
   }
-
 }

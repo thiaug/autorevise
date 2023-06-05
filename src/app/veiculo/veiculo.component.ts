@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import firebase from 'firebase/compat/app';
 import { VeiculoService } from '.././veiculo.service';
 import { Veiculo } from '.././veiculo';
+import { Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-veiculo',
@@ -10,15 +11,16 @@ import { Veiculo } from '.././veiculo';
 })
 export class VeiculoComponent implements OnInit {
   veiculos: Veiculo[] = [];
+  veiculoService: VeiculoService | undefined;
 
-  constructor() {}
-  // ERRO AO CHAMAR SERVICO NO CONSTRUTOR !!!!
+  constructor() {
+    // this.veiculoService = veiculoService;
+  }
 
   ngOnInit() {
     // this.loadVeiculos();
   }
 
-  // ----------------- CARREGA -----------------
   // loadVeiculos() {
   //   this.veiculoService.getAllVeiculos().subscribe((changes) => {
   //     this.veiculos = changes.map((action) => {
@@ -29,7 +31,6 @@ export class VeiculoComponent implements OnInit {
   //   });
   // }
 
-  // ----------------- ADICIONA -----------------
   // addVeiculo(veiculo: Veiculo) {
   //   this.veiculoService
   //     .addVeiculo(veiculo)
@@ -41,7 +42,6 @@ export class VeiculoComponent implements OnInit {
   //     });
   // }
 
-  // ----------------- UPDATE -----------------
   // updateVeiculo(veiculo: Veiculo) {
   //   this.veiculoService
   //     .updateVeiculo(veiculo)
@@ -53,15 +53,14 @@ export class VeiculoComponent implements OnInit {
   //     });
   // }
 
-  // ----------------- DELETE -----------------
-  // deleteVeiculo(id: string) {
-  //   this.veiculoService
-  //     .deleteVeiculo(id)
-  //     .then(() => {
-  //       console.log('TESTE: Veiculo Deletado');
-  //     })
-  //     .catch((error) => {
-  //       console.error('Erro ao deletar veiculo');
-  //     });
-  // }
+  //   deleteVeiculo(id: string) {
+  //     this.veiculoService
+  //       .deleteVeiculo(id)
+  //       .then(() => {
+  //         console.log('TESTE: Veiculo Deletado');
+  //       })
+  //       .catch((error) => {
+  //         console.error('Erro ao deletar veiculo');
+  //       });
+  //   }
 }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import firebase from 'firebase/compat/app';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFirestoreCollection } from '@angular/fire/compat/firestore/public_api';
@@ -11,7 +12,7 @@ import { Veiculo } from './veiculo';
 @Injectable({
   providedIn: 'root',
 })
-
+@Injectable()
 export class VeiculoService {
   private veiculosCollection: AngularFirestoreCollection<Veiculo>;
 

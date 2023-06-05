@@ -11,11 +11,9 @@ import { Injectable } from '@angular/core';
 })
 export class VeiculoComponent implements OnInit {
   veiculos: Veiculo[] = [];
-  veiculoService: VeiculoService | undefined;
+  // veiculoService: VeiculoService;
 
-  constructor() {
-    // this.veiculoService = veiculoService;
-  }
+  constructor() {}
 
   ngOnInit() {
     // this.loadVeiculos();
